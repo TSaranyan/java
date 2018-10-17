@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="thirikkale-dev" default="war">
+	<property file="build.properties" />
+	<!--
+	<path id="catalina-ant-classpath">
+	    <fileset dir="${appserver.lib}">
+	           <include name="catalina-ant.jar"/>
+	           <include name="tomcat-coyote.jar"/>
+	           <include name="tomcat-util.jar"/>
+	        </fileset>
+	    <fileset dir="${appserver.home}">
+	               <include name="tomcat-juli.jar"/>
+	    </fileset>
+	</path>
+
+	<target name="tomcat-start" >
+	    <java jar="${tomcat.home}/bin/bootstrap.jar" fork="true">
+	        <jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+	    </java>
+	</target>
+	   	
+	<taskdef name="start" classname="org.apache.catalina.ant.StartTask" classpathref="catalina-ant-classpath"/>
+
+	<target name="start" description="start application in tomcat">
+			<start url="${tomcat-manager-url}" username="${tomcat-manager-username}"
+				password="${tomcat-manager-password}" path="/${project-name}" />
+	</target>
+	-->
+	
+	<path id="compile.classpath">
+		<fileset dir="${external-libraries}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${appserver.lib}">
+			<include name="servlet-api.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="build/classes/prop"/>
+	</target>
+	
+	<target name="compile" depends="init" >
+		<javac  includeantruntime="false" destdir="build/classes" debug="true" srcdir="src">
+			<classpath refid="compile.classpath"/>
+		</javac>
+		<copy todir="build/classes/prop" >  
+		     <fileset dir="WebContent/WEB-INF/prop" includes="**"/>  
+		</copy>		
+	</target>
+	
+	<target name="war" depends="compile">
+		<war destfile="D:\Software\WebServers\apache-tomcat-6.0.33\webapps\thirikkale-dev.war" webxml="WebContent/WEB-INF/web.xml">
+			<fileset dir="WebContent"/>
+			<lib dir="WebContent/WEB-INF/lib"/>
+			<classes dir="build/classes"/>
+		</war>
+	</target>
+	
+	<target name="clean">
+		<delete dir="build" />
+		<delete dir="D:\Software\WebServers\apache-tomcat-6.0.33\webapps\thirikkale-dev" />
+		<delete file="D:\Software\WebServers\apache-tomcat-6.0.33\webapps\thirikkale-dev.war" />
+	</target>
+	<target name="build-start-tomcat" depends="war">
+	    <property name="buildC" value="D:\Software\WebServers\apache-tomcat-6.0.33" />
+		<exec dir="${buildC}" executable="startup.bat" os="Windows XP" />
+	</target>	
+	
+</project>

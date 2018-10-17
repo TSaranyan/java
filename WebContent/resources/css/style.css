@@ -1,0 +1,253 @@
+/*!
+ * Start Bootstrap - Busines Frontpage (http://startbootstrap.com/template-overviews/business-frontpage)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+
+
+/* font definition */
+.error {
+	color: red;
+}
+
+@font-face {
+    font-family: Roboto-Black;
+    src: url('../vendor/fonts/roboto/Roboto-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-BlackItalic;
+    src: url('../vendor/fonts/roboto/Roboto-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('../vendor/fonts/roboto/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-Italic;
+    src: url('../vendor/fonts/roboto/Roboto-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../vendor/fonts/roboto/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-LightItalic;
+    src: url('../vendor/fonts/roboto/Roboto-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url('../vendor/fonts/roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-MediumItalic;
+    src: url('../vendor/fonts/roboto/Roboto-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../vendor/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url('../vendor/fonts/roboto/Roboto-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-ThinItalic;
+    src: url('../vendor/fonts/roboto/Roboto-ThinItalic.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Roboto-Regular', serif;
+    line-height: 1.375;
+    padding-top: 54px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: 'Roboto-Light';
+}
+
+.hide {
+    display: none;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.logo {
+    width: 200px;
+}
+
+.business-header {
+    height: 15vh;
+    min-height: 90px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+    border-bottom: 8px solid #343a40;
+}
+
+.business-header .tag-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0px 5px 0px 20px;
+    background: -webkit-linear-gradient(transparent, #000);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, #000);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, #000);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, #000);
+    /* Standard syntax */
+}
+
+.business-header .tag-line h1 {
+    color: #FFF;
+    font-size: 52pt;
+    text-shadow: 0px 0px 25px #000;
+    text-align: center;
+}
+
+.card {
+    height: 50vh;
+    border: 0;
+}
+
+.thumbnail-min-width {
+    min-width:15px;
+}
+.card-title {
+    padding-left: 8px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.card-link:hover {
+    box-shadow: 3px 3px 20px #AAA;
+    display: block;
+    color: inherit;
+    opacity: 0.9;
+}
+
+.highlite-yellow {
+    background-color: yellow;
+    font-size: 14px;
+    padding: 5px;
+    font-style: italic;
+    color: #888;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.v-property .value {
+    position: relative;
+    top: 2px;
+    margin: 0 0 0 8px;
+    color: #716F70;
+}
+
+.v-property {
+    color: #716F70;
+}
+
+.col-3 {
+	float: left;
+}
+.v-property .img-icon {
+    width: 26px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.content {
+    min-height: 77vh;
+}
+
+.img-side {
+    width: 100%;
+}
+
+ul.vertical-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-list li {
+    display: inline;
+    padding: 5px 25px 5px 0;
+    font-size: 14px;
+    font-family: 'Roboto-Medium';
+    color: #555;
+    line-height: 35px;
+    white-space: nowrap;
+}
+
+.vertical-list li span.val {
+    color: #888;
+    font-family: 'Roboto-Regular';
+}
+
+.main-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.main-row .btn-primary {
+    background-color: #343a40;
+    border-color: #19232d;
+}
+
+
+/* ------ Media Queries --------- */
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 992px) {
+    .business-header .tag-line h1 {
+        font-size: 40pt;
+    }
+}
+
+@media (max-width: 768px) {
+    .business-header .tag-line h1 {
+        font-size: 35pt;
+    }
+    .list-btn {
+        margin: 15px 0 20px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .business-header .tag-line h1 {
+        font-size: 30pt;
+    }
+}
